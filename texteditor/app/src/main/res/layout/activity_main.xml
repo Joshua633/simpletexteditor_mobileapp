@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:textColor="#333333" />
+
+    <!-- Text area that can be dragged around -->
+    <EditText
+        android:id="@+id/draggableText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drag me anywhere!"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="text"
+        android:padding="12dp"
+        android:layout_centerInParent="true"/>
+
+    <!-- Formatting toolbar -->
+    <LinearLayout
+        android:id="@+id/formatToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:padding="8dp"
+        android:layout_above="@+id/colorToolbar"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:minWidth="48dp"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <Button
+            android:id="@+id/btnItalic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I"
+            android:textStyle="italic"
+            android:textSize="16sp"
+            android:minWidth="48dp"
+            android:layout_marginLeft="8dp"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <Button
+            android:id="@+id/btnIncrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A+"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:minWidth="48dp"
+            android:layout_marginLeft="8dp"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <Button
+            android:id="@+id/btnDecrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A-"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:minWidth="48dp"
+            android:layout_marginLeft="8dp"
+            android:background="?android:attr/selectableItemBackground"/>
+
+    </LinearLayout>
+
+    <!-- Color selection toolbar -->
+    <LinearLayout
+        android:id="@+id/colorToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:padding="8dp"
+        android:layout_above="@+id/actionToolbar"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnBlack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#000000"
+            android:text=""
+            android:tag="#000000"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:id="@+id/btnRed"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#FF0000"
+            android:text=""
+            android:tag="#FF0000"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:id="@+id/btnBlue"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#0000FF"
+            android:text=""
+            android:tag="#0000FF"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:id="@+id/btnGreen"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#00FF00"
+            android:text=""
+            android:tag="#00FF00"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:id="@+id/btnPurple"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#800080"
+            android:text=""
+            android:tag="#800080"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:id="@+id/btnOrange"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#FFA500"
+            android:text=""
+            android:tag="#FFA500"
+            android:layout_margin="4dp"/>
+
+    </LinearLayout>
+
+    <!-- Action buttons -->
+    <LinearLayout
+        android:id="@+id/actionToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:padding="8dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnUndo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Undo"
+            android:textSize="14sp"
+            android:minWidth="80dp"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <Button
+            android:id="@+id/btnRedo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Redo"
+            android:textSize="14sp"
+            android:minWidth="80dp"
+            android:layout_marginLeft="16dp"
+            android:background="?android:attr/selectableItemBackground"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
